@@ -1,12 +1,18 @@
 import React from 'react';
-import Posts from './pages/Posts';
+import List from './pages/List';
+import Detail from './pages/Detail';
+import { Route, Routes, Navigate } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <Posts />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Routes>
+                <Route path="/" element={<List />} />
+                <Route path="/:id" element={<Detail />} />
+                <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

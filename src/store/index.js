@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import reducers from './reducers.js';
 
 const initialState = {
-    loading: true,
+    loading: false,
     data: [],
     error: '',
 };
